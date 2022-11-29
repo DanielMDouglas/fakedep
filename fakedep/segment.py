@@ -1,5 +1,5 @@
 import numpy as np
-from dtypes import *
+from .dtypes import *
 
 class Segment:
     def __init__(self, vertex = [0, 0, 0], mip = True, length = 10):

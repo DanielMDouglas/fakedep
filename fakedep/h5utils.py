@@ -1,6 +1,6 @@
 import h5py
 
-from dtypes import *
+from .dtypes import *
 
 def initHDF5File(fileName):
     with h5py.File(fileName, 'w') as f:
