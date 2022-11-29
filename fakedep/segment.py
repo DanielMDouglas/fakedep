@@ -3,8 +3,6 @@ from .dtypes import *
 
 class Segment:
     def __init__(self, vertex = [0, 0, 0], mip = True, length = 10):
-        self.things = things
-
         self.vertexPos = vertex
         
         self.direction = np.random.random(3)
@@ -44,7 +42,7 @@ class Segment:
         xd = self.segment[0]["x_end"] - self.segment[0]["x_start"]
         yd = self.segment[0]["y_end"] - self.segment[0]["y_start"]
         zd = self.segment[0]["z_end"] - self.segment[0]["z_start"]
-        dx = sqrt(xd**2 + yd**2 + zd**2)
+        dx = self.length
         self.segment[0]["dx"] = dx
         self.segment[0]["x"] = (self.segment[0]["x_start"] + self.segment[0]["x_end"]) / 2.
         self.segment[0]["y"] = (self.segment[0]["y_start"] + self.segment[0]["y_end"]) / 2.
