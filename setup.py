@@ -28,4 +28,4 @@ setuptools.setup(
         "Topic :: Scientific/Engineering :: Physics"
     ],
     python_requires='>=3.2',
-}
+)
