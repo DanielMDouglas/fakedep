@@ -1,0 +1,23 @@
+#!/bin/env python
+
+from fakedep import h5utils, segment
+
+def main(args):
+    h5utils.initHDF5File(args.outfile)
+
+    fakeSegment = segment.Segment()
+    
+    h5utils.updateHDF5File(args.outfile,
+                           fakeSegment.segment,
+                           fakeSegment.trajectory,
+                           fakeSegment.vertex)
+
+if __name__ == '__main__':
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('outfile', type = str,
+                        help = "output fake edep-sim file")
+    args = parser.parse_args()
+
+    main(args)
